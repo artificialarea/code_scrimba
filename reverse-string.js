@@ -14,12 +14,5 @@ function reverseStr(str) {
 
 
 
-
-
-
-
-
-
 // TEST
-
 console.log(reverseStr('hello world'));
