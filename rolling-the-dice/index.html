@@ -1,38 +1,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <!-- <script src="index.pack.js"></script> -->
-        <script src="index.js"></script>
+        
     </head>
     <body>
-        <div class="dice face-one">
+        <div class="dice face-one hidden">
             <div class="dot"></div>
         </div>
-        <div class="dice face-two">
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="dice face-three">
-            <div class="dot"></div>
+        <div class="dice face-two hidden">
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-        <div class="dice face-four">
-            <div class="column">
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="column">
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+        <div class="dice face-three hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
-        <div class="dice face-four face-five">
+        <div class="dice face-four hidden">
             <div class="column">
                 <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="column">
                 <div class="dot"></div>
             </div>
             <div class="column">
@@ -40,7 +26,20 @@
                 <div class="dot"></div>
             </div>
         </div>
-        <div class="dice face-four">
+        <div id="dice" class="dice face-five">
+            <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="column">
+                <div class="dot"></div>
+            </div>
+            <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="dice face-six hidden">
             <div class="column">
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -52,5 +51,8 @@
                 <div class="dot"></div>
             </div>
         </div>
+        <button type="button" id="button" class="button">Roll the die</button>
     </body>
+    <!-- <script src="index.pack.js"></script> -->
+    <script src="index.js"></script>
 </html>

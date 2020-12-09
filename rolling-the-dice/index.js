@@ -11,6 +11,65 @@ event listeners, Math.random()
 
 // Write your code here 👇
 
+// let dice = document.querySelector('.dice');
+let dice = document.querySelectorAll('.dice');
+// let dice = document.querySelector('#dice');
+// let dice = document.getElementsByClassName('dice');
+let five = document.querySelector('.face-five');
+
+function rollTheDice() {
+    /* 
+    Returns a random integer between the specified values. 
+    The value is no lower than `min`, 
+    and is less than (but not equal to) `max`.
+    */
+    let min = 1;
+    let max = 7;
+    let random = Math.floor(Math.random() * (max - min) + min);
+
+    // note: to change multiple elements with the same class name 
+    // we need to iterate through all instances of element
+    dice.forEach(el => el.style.visibility = 'hidden');
+    
+    setTimeout(() => {
+        // note: 
+        // `visibility: hidden` hides element but it still takes up space in layout
+        // `display: none` (associated with .hidden class) removes element completely
+        dice.forEach(el => el.style.visibility = 'visible');
+        dice.forEach(el => el.classList.add('hidden'));
+        if (random === 1) {
+            document.querySelector('.face-one').classList.remove('hidden');
+        }
+        if (random === 2) {
+            document.querySelector('.face-two').classList.remove('hidden');
+        }
+        if (random === 3) {
+            document.querySelector('.face-three').classList.remove('hidden');
+        }
+        if (random === 4) {
+            document.querySelector('.face-four').classList.remove('hidden');
+        }
+        if (random === 5) {
+            document.querySelector('.face-five').classList.remove('hidden');
+        }
+        if (random === 6) {
+            document.querySelector('.face-six').classList.remove('hidden');
+        }
+    }, 200);
+        
+
+    // five.style.backgroundColor = '#999';
+    console.log(random);
+}
+
+const button = document.querySelector('.button');
+button.addEventListener('click', rollTheDice, false);
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('loaded');
+    // const button = document.querySelector('.button');
+    // button.addEventListener('click', rollTheDice, false);
+});
 
 /*
 

@@ -1,6 +1,8 @@
 body {
     background-color: #AEB8FE;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dice {
@@ -10,7 +12,7 @@ body {
     border-radius: 10px;
     background-color: #EFE5DC;
     padding: 10px;
-    margin: 10px;
+    margin: 100px;
 
 }
 
@@ -47,11 +49,17 @@ body {
     align-self: flex-end;
 }
 
-.face-four {    /* also for .face-five and .face-six */
+.face-four,
+.face-five,
+.face-six 
+{    /* also for .face-five and .face-six */
     display: flex;
     justify-content: space-between;
 }
-.face-four .column {
+.face-four .column, 
+.face-five .column, 
+.face-six .column 
+{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,3 +78,21 @@ body {
 .face-six {
     display: none;
 } */
+
+.hidden {
+    display: none;
+}
+
+.button {
+    font-weight: bold;
+    width: 100px;
+    border: 4px solid black;
+    padding: 8px;
+    background-color: white;
+    color: black;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
