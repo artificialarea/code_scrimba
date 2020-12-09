@@ -1,0 +1,72 @@
+body {
+    background-color: #AEB8FE;
+    display: flex;
+}
+
+.dice {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: #EFE5DC;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    /* margin: 35px; */
+}
+
+.face-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face-two {
+    display: flex;
+    justify-content: space-between;
+}
+.face-two .dot:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+.face-three {
+    display: flex;
+    justify-content: space-between;
+}
+.face-three .dot:nth-of-type(2) {
+    align-self: center;
+}
+.face-three .dot:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.face-four {    /* also for .face-five and .face-six */
+    display: flex;
+    justify-content: space-between;
+}
+.face-four .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.face-five .column:nth-of-type(2) {
+    justify-content: center;
+}
+
+/* only show one die face at a time */
+/* .face-one,
+.face-two,
+.face-three,
+.face-four,
+.face-five,
+.face-six {
+    display: none;
+} */
