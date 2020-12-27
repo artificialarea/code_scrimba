@@ -11,11 +11,9 @@ event listeners, Math.random()
 
 // Write your code here 👇
 
-// let dice = document.querySelector('.dice');
+
 let dice = document.querySelectorAll('.dice');
-// let dice = document.querySelector('#dice');
-// let dice = document.getElementsByClassName('dice');
-let five = document.querySelector('.face-five');
+console.log(dice);
 
 function rollTheDice() {
     /* 
